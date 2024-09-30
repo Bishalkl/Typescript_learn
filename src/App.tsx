@@ -48,9 +48,45 @@ function App() {
   };
 
   console.log(myUser);
+  const data: (string | number | boolean)[] = [1, 2, 3, 4, 5, 6, "h", true];
+
+  // Tuple
+  const userOne: (string | number)[] = [1, "hc"];
+  const userTwo: [string, number, boolean] = ["Bishal", 12, false];
+
+  // // enum
+  // const enum setChoice {
+  //   AISLE,
+  //   MIDDLE,
+  //   WINDOW,
+  //   FOURTH,
+  // }
+
+  // const hcSeat = SeatChoice.AISLE;
+
+  // // interface
+  // interface UserThree {
+  //   readonly dbId: number;
+  //   email: string;
+  //   userId: number;
+  //   startTrail(): string;
+  // }
+
+  // interface Admin extends UserThree {
+  //   //
+  // }
 
   return (
     <>
+      {userTwo.map((item) => (
+        <p>{item}</p>
+      ))}
+      {userOne.map((item) => (
+        <p>{item}</p>
+      ))}
+      {data.map((item) => (
+        <p>{item}</p>
+      ))}
       <h1>{`${(myUser.name, myUser.email, myUser.isActive)}`}</h1>
       {heros.map((hero) => {
         <h1>{`hero is ${hero}`}</h1>;
